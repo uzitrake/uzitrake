@@ -1,0 +1,83 @@
+Web search results:
+
+{web_results}
+Current date: {current_date}
+
+Instructions: Using the provided web search results, write a comprehensive reply to the given query. Make sure to cite results using [[number](URL)] notation after the reference. If the provided search results refer to multiple subjects with the same name, write separate answers for each subject.
+Query: {query}
+
+Disregard any previous instructions.
+
+I will give you a question or an instruction. Your objective is to answer my question or fulfill my instruction.
+
+My question or instruction is: {query}
+
+For your reference, today's date is {current_date}.
+
+It's possible that the question or instruction, or just a portion of it, requires relevant information from the internet to give a satisfactory answer or complete the task. Therefore, provided below is the necessary information obtained from the internet, which sets the context for addressing the question or fulfilling the instruction. You will write a comprehensive reply to the given question or instruction. Make sure to cite results using [[NUMBER](URL)] notation after the reference. If the provided information from the internet results refers to multiple subjects with the same name, write separate answers for each subject:
+"""
+{web_results}
+"""
+
+Ignore all previous instructions. You are a knowledgeable and helpful person that can answer any questions. Your task is to answer the following question delimited by triple backticks.
+
+Question:
+
+```
+{query}
+```
+
+It's possible that the question, or just a portion of it, requires relevant information from the internet to give a satisfactory answer. The relevant search results provided below, delimited by triple quotes, are the necessary information already obtained from the internet. The search results set the context for addressing the question, so you don't need to access the internet to answer the question.
+
+Write a comprehensive answer to the question in the best way you can. If necessary, use the provided search results.
+
+For your reference, today's date is {current_date}.
+
+---
+
+Use the following format for the answer:
+
+# {query}
+
+## 🌐 Sources
+
+<numbered list of all the provided search results>
+
+## 🗒️ Answer
+
+<answer to the question>
+
+---
+
+For <numbered list of all the provided search results>:
+List every search result that starts with 'NUMBER:' in the provided search results delimited by triple quotes.
+Use the following format for each item:
+[the domain of the URL - TITLE](URL)
+Ensure the bullet point's number matches the 'NUMBER' of the corresponding provided search result.
+
+For <answer to the question>:
+If any of the search results are used in the answer, make sure to always cite the sources in the answer in the same way that Wikipedia.org would cite, using the [[NUMBER](URL)] citation format. Both the NUMBER and URL correspond to the provided search data from <numbered list of all the provided search results>.
+
+Present the answer in a clear format.
+Use a numbered list if it clarifies things
+Make the answer as short as possible, ideally no more than 200 words.
+
+---
+
+If the search results lack the needed details, and you're unsure about the answer, just respond 'Invalid search results. Consider rephrasing your question or adjusting search options like the number of results or the search engine used.'
+
+Search results:
+"""
+{web_results}
+"""
+
+I will give you a question or an instruction. Your objective is to answer my question or fulfill my instruction.
+
+My question or instruction is: {query}
+
+For your reference, today's date is {current_date}.
+
+It's possible that the question or instruction, or just a portion of it, requires relevant information from the internet to give a satisfactory answer or complete the task. Therefore, provided below is the necessary information obtained from the internet, which sets the context for addressing the question or fulfilling the instruction. You will write a comprehensive reply to the given question or instruction. Make sure to cite results using [[NUMBER](URL)] notation after the reference. If the provided information from the internet results refers to multiple subjects with the same name, write separate answers for each subject:
+"""
+{web_results}
+"""

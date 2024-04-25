@@ -1,4 +1,4 @@
-## Bonjour! , I'm UziTrake! 👋
+## Bonjour! 👋
 
 Welcome to my GitHub profile! I'm passionate about web design, programming, and all things tech-related. Here's a bit about me:
 
